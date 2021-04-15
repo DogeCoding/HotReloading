@@ -66,9 +66,9 @@ class SwiftSweeper {
         let reference = unsafeBitCast(instance, to: UnsafeRawPointer.self)
         if seen[reference] == nil {
             seen[reference] = true
-            if debugSweep {
-                print("Sweeping instance \(reference) of class \(type(of: instance))")
-            }
+//            if debugSweep {
+//                print("Sweeping instance \(reference) of class \(type(of: instance))")
+//            }
 
             instanceTask(instance)
 
